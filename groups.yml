@@ -1,0 +1,29 @@
+port: 7890
+socks-port: 7891
+allow-lan: true
+mode: Rule
+log-level: info
+external-controller: 127.0.0.1:9090
+proxies:
+proxy-groups:
+  - name: hash1
+    type: select
+    proxies:
+  - name: hash2
+    type: select
+    proxies:
+  - name: hash3
+    type: select
+    proxies:
+  - name: hash4
+    type: select
+    proxies:
+  - name: hash5
+    type: select
+    proxies:
+  - name: hash6
+    type: select
+    proxies:
+rules:
+proxy-providers: {}
+rule-providers: {}
